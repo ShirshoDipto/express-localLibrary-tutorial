@@ -12,7 +12,10 @@ var app = express();
 
 const mongoose = require("mongoose");
 mongoose.set("strictQuery", false);
-const mongoDB = "mongodb+srv://ShirshoDipto:princeton01@cluster0.fspjadu.mongodb.net/?retryWrites=true&w=majority"
+// Set up mongoose connection
+const dev_db_url =
+  "mongodb+srv://ShirshoDipto:princeton01@cluster0.fspjadu.mongodb.net/?retryWrites=true&w=majority";
+const mongoDB = process.env.MONGODB_URI || dev_db_url;
 
 
 main().catch(err => console.log(err));

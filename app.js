@@ -43,17 +43,4 @@ app.use(function(err, req, res, next) {
 module.exports = app;
 
 
-// ######### My own tests ############
-// const testFunction = (a, b) => {
-//   console.log(this);
-//   console.log(a+b);
-// }
-
-// function testFunction(a,b) {
-//   console.log(this)
-//   console.log(a+b)
-// }
-
-// testFunction(1,2);
-
 

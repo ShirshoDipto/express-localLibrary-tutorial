@@ -10,20 +10,6 @@ const catalogRouter = require('./routes/catalog');
 
 var app = express();
 
-const mongoose = require("mongoose");
-mongoose.set("strictQuery", false);
-// Set up mongoose connection
-const dev_db_url =
-  "mongodb+srv://ShirshoDipto:princeton01@cluster0.fspjadu.mongodb.net/?retryWrites=true&w=majority";
-const mongoDB = process.env.MONGODB_URI || dev_db_url;
-
-
-main().catch(err => console.log(err));
-async function main() {
-  await mongoose.connect(mongoDB);
-  console.log("Connection Successful!!!");
-}
-
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
